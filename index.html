@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulir Pendaftaran Siswa</title>
+    <style>
+      body {
+        background-color: #89CFF0;
+        font-family: Arial, sans-serif;
+        color: #000000;
+      }
+      
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+      }
+      
+      .form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #E30B5C;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+      input[type="text"],
+      input[type="tel"],
+      input[type="number"],
+      select {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        color: #444;
+      }
+      
+      input[type="submit"] {
+        background-color: #af4c59;
+        color: #db0c0c;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .form i[type="submit"]:hover {
+        background-color: #070ad473;
+      }
+      
+      label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+	  .submit{
+		background-color: #90EE90;
+		padding: 10px 20px ;
+
+	  }
+    </style>
+  </head>
+  <body>
+	<tabel>
+		<td><img src="4tjkt.jpg" width="50" height="50" style="margin-left: 400px; margin-bottom: -70px; border-radius: 50px;"></td>
+	</tabel>
+    <h1>Daftar Hadir Siswa TJKT</h1>
+	<center> <h2>Tanggal 13/April/2023</h2> </center>
+    <div class="form">
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" id="inputNama" name="nama"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="nis">NIS</label>
+        <input type="number" id="inputNis" name="nis"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="jurusan">Mata Pelajaran</label>
+        <input type="text" id="inputMapel" name="ttl"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="hp">No. HP</label>
+        <input type="number" id="inputNohp" name="hp"  autocomplete="off">
+      </div>
+      <button class="submit" onclick="setOutput()">Selesai</button>
+    </div>
+    <h1 id="output"></h1>
+    
+    <script>
+      function setOutput() {
+        const nama = document.getElementById('inputNama')
+        const nis = document.getElementById('inputNis')
+        const mapel = document.getElementById('inputMapel')
+        const hp = document.getElementById('inputNohp')
+        const output = document.getElementById('output')
+        output.innerHTML = nama.value + ' ' + nis.value + ' ' + mapel.value + ' ' + hp.value
+      }
+    </script>
+  </body>
+</html>
